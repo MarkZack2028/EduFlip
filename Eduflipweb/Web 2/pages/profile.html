@@ -1,0 +1,79 @@
+<!-- Profile Content -->
+<div id="profileContent" class="content">
+  <h2>Profile Saya</h2>
+  <div class="profile-container">
+    <div class="profile-card">
+      <div class="profile-avatar">
+        <div class="avatar-circle">👤</div>
+      </div>
+      <h3 id="profileName">Pengguna</h3>
+      <p class="profile-email">user@eduflip.com</p>
+      <div class="profile-badges">
+        <span class="badge">🌟 Member Sejak 2024</span>
+        <span class="badge">🏆 8 Sertifikat</span>
+      </div>
+    </div>
+
+    <div class="profile-info">
+      <div class="info-section">
+        <h4>Informasi Personal</h4>
+        <div class="info-item">
+          <label>Nama Lengkap</label>
+          <input type="text" id="fullName" value="Pengguna EduFlip" />
+        </div>
+        <div class="info-item">
+          <label>Email</label>
+          <input type="email" id="email" value="user@eduflip.com" />
+        </div>
+        <div class="info-item">
+          <label>Nomor Telepon</label>
+          <input type="tel" id="phone" value="+62 812-3456-7890" />
+        </div>
+        <div class="info-item">
+          <label>Bio</label>
+          <textarea id="bio" rows="3">
+Saya seorang learner yang passionate di bidang teknologi informatika</textarea
+          >
+        </div>
+        <button class="btn-primary">Simpan Perubahan</button>
+      </div>
+
+      <div class="info-section">
+        <h4>Statistik Pembelajaran</h4>
+        <div class="stats-list">
+          <div class="stat-item">
+            <span>Total Kursus Diikuti</span>
+            <strong>12</strong>
+          </div>
+          <div class="stat-item">
+            <span>Kursus Selesai</span>
+            <strong>5</strong>
+          </div>
+          <div class="stat-item">
+            <span>Jam Belajar</span>
+            <strong>24</strong>
+          </div>
+          <div class="stat-item">
+            <span>Sertifikat Diperoleh</span>
+            <strong>8</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Statistik Grafik di Profile -->
+  <div class="statistics-section">
+    <h3>Analisis Pembelajaran</h3>
+    <div class="chart-container">
+      <div class="chart-box">
+        <h4>Distribusi Waktu Belajar</h4>
+        <canvas id="learningPieChart"></canvas>
+      </div>
+      <div class="chart-box">
+        <h4>Status Kursus</h4>
+        <canvas id="coursePieChart"></canvas>
+      </div>
+    </div>
+  </div>
+</div>

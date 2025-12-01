@@ -1,0 +1,96 @@
+/* Login Page Styles */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.login-box {
+  background: var(--white);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px var(--shadow);
+  width: 100%;
+  max-width: 420px;
+  animation: fadeInUp 0.6s ease;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo h1 {
+  font-size: 36px;
+  color: var(--matcha-dark);
+  margin-bottom: 10px;
+}
+
+.logo p {
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid var(--matcha-medium);
+  border-radius: 10px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: var(--matcha-dark);
+  box-shadow: 0 0 0 3px rgba(102, 187, 106, 0.1);
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(
+    135deg,
+    var(--matcha-main) 0%,
+    var(--matcha-dark) 100%
+  );
+  color: var(--white);
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px var(--shadow-hover);
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 20px;
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+.register-link a {
+  color: var(--matcha-dark);
+  text-decoration: none;
+  font-weight: 600;
+}
