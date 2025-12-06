@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduFlip - Platform Pembelajaran Informatika</title>
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/courses.css" />
+    <link rel="stylesheet" href="css/profile.css" />
+    <link rel="stylesheet" href="css/quiz.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <!-- Halaman Login -->
+    <div id="loginPage" class="page active">
+      <div class="login-container">
+        <div class="login-box">
+          <div class="logo">
+            <h1>🎓 EduFlip</h1>
+            <p>Platform Pembelajaran Informatika</p>
+          </div>
+          <form id="loginForm">
+            <div class="input-group">
+              <label for="username">Username</label>
+              <input
+                type="text"
+                id="username"
+                placeholder="Masukkan username"
+                required
+              />
+            </div>
+            <div class="input-group">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                placeholder="Masukkan password"
+                required
+              />
+            </div>
+            <button type="submit" class="btn-primary">Masuk</button>
+          </form>
+          <p class="register-link">
+            Belum punya akun? <a href="#" id="registerLink">Daftar disini</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dashboard -->
+    <div id="dashboardPage" class="page">
+      <nav class="navbar">
+        <div class="nav-brand">🎓 EduFlip</div>
+        <div class="nav-menu">
+          <a href="#" class="nav-link active" data-page="dashboard"
+            >Dashboard</a
+          >
+          <a href="#" class="nav-link" data-page="courses"
+            >Paket Pembelajaran</a
+          >
+          <a href="#" class="nav-link" data-page="quiz">Quiz</a>
+          <a href="#" class="nav-link" data-page="profile">Profile</a>
+          <div class="notification-bell" id="notificationBell">
+            🔔
+            <span class="notification-badge" id="notificationBadge">3</span>
+          </div>
+          <a href="#" class="nav-link" id="logoutBtn">Keluar</a>
+        </div>
+      </nav>
+
+      <div class="container">
+        <!-- Dashboard Content -->
+        <div id="dashboardContent" class="content active">
+          <div class="welcome-section">
+            <h2>Selamat Datang, <span id="displayName">Pengguna</span>! 👋</h2>
+            <p>Mari lanjutkan perjalanan belajar informatika Anda</p>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-icon">📚</div>
+              <div class="stat-info">
+                <h3>12</h3>
+                <p>Kursus Tersedia</p>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">✅</div>
+              <div class="stat-info">
+                <h3>5</h3>
+                <p>Kursus Selesai</p>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">⏱️</div>
+              <div class="stat-info">
+                <h3>24</h3>
+                <p>Jam Belajar</p>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">🏆</div>
+              <div class="stat-info">
+                <h3>8</h3>
+                <p>Sertifikat</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Events Section -->
+          <div class="events-section">
+            <h3>📅 Event & Acara Mendatang</h3>
+            <div class="events-grid">
+              <div class="event-card">
+                <div class="event-date">
+                  <div class="event-day">15</div>
+                  <div class="event-month">DES</div>
+                </div>
+                <div class="event-info">
+                  <h4>Workshop: Python untuk Data Science</h4>
+                  <p>
+                    Belajar menggunakan Python untuk analisis data dan
+                    visualisasi
+                  </p>
+                  <div class="event-meta">
+                    <span>⏰ 14:00 - 16:00 WIB</span>
+                    <span>📍 Online via Zoom</span>
+                    <span class="event-seats">🎫 25 kursi tersisa</span>
+                  </div>
+                  <button class="btn-register-event">Daftar Sekarang</button>
+                </div>
+              </div>
+
+              <div class="event-card">
+                <div class="event-date">
+                  <div class="event-day">20</div>
+                  <div class="event-month">DES</div>
+                </div>
+                <div class="event-info">
+                  <h4>Webinar: Karir di Bidang AI & Machine Learning</h4>
+                  <p>Tips memulai karir dan peluang di industri AI</p>
+                  <div class="event-meta">
+                    <span>⏰ 19:00 - 21:00 WIB</span>
+                    <span>📍 Online via Google Meet</span>
+                    <span class="event-seats">🎫 50 kursi tersisa</span>
+                  </div>
+                  <button class="btn-register-event">Daftar Sekarang</button>
+                </div>
+              </div>
+
+              <div class="event-card">
+                <div class="event-date">
+                  <div class="event-day">28</div>
+                  <div class="event-month">DES</div>
+                </div>
+                <div class="event-info">
+                  <h4>Hackathon: Build Web App Challenge</h4>
+                  <p>Kompetisi 24 jam membuat aplikasi web inovatif</p>
+                  <div class="event-meta">
+                    <span>⏰ 09:00 - 09:00 WIB</span>
+                    <span>📍 Hybrid (Online & Offline)</span>
+                    <span class="event-seats">🎫 15 tim tersisa</span>
+                  </div>
+                  <button class="btn-register-event">Daftar Sekarang</button>
+                </div>
+              </div>
+
+              <div class="event-card">
+                <div class="event-date">
+                  <div class="event-day">05</div>
+                  <div class="event-month">JAN</div>
+                </div>
+                <div class="event-info">
+                  <h4>Bootcamp: Full Stack Web Development</h4>
+                  <p>
+                    Intensive bootcamp selama 2 minggu untuk menjadi full stack
+                    developer
+                  </p>
+                  <div class="event-meta">
+                    <span>⏰ 09:00 - 17:00 WIB</span>
+                    <span>📍 Jakarta & Online</span>
+                    <span class="event-seats">🎫 10 kursi tersisa</span>
+                  </div>
+                  <button class="btn-register-event">Daftar Sekarang</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="progress-section">
+            <h3>Kursus Yang Sedang Berjalan</h3>
+            <div class="progress-card">
+              <div class="progress-header">
+                <h4>Pemrograman Python Dasar</h4>
+                <span class="progress-percent">60%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 60%"></div>
+              </div>
+              <p class="progress-text">6 dari 10 modul selesai</p>
+            </div>
+            <div class="progress-card">
+              <div class="progress-header">
+                <h4>Struktur Data & Algoritma</h4>
+                <span class="progress-percent">35%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 35%"></div>
+              </div>
+              <p class="progress-text">4 dari 12 modul selesai</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Courses Content -->
+        <div id="coursesContent" class="content">
+          <h2>Paket Pembelajaran Informatika</h2>
+          <p class="subtitle">
+            Pilih paket pembelajaran sesuai dengan minat dan kebutuhan Anda
+          </p>
+
+          <div class="courses-grid">
+            <div class="course-card">
+              <div class="course-badge beginner">Pemula</div>
+              <div class="course-icon">🐍</div>
+              <h3>Pemrograman Python</h3>
+              <p>
+                Pelajari dasar-dasar pemrograman dengan Python dari nol hingga
+                mahir
+              </p>
+              <div class="course-meta">
+                <span>⏱️ 20 jam</span>
+                <span>📚 10 modul</span>
+              </div>
+              <button class="btn-enroll">Mulai Belajar</button>
+            </div>
+
+            <div class="course-card">
+              <div class="course-badge intermediate">Menengah</div>
+              <div class="course-icon">💾</div>
+              <h3>Struktur Data & Algoritma</h3>
+              <p>
+                Kuasai konsep struktur data dan algoritma untuk meningkatkan
+                skill coding
+              </p>
+              <div class="course-meta">
+                <span>⏱️ 30 jam</span>
+                <span>📚 12 modul</span>
+              </div>
+              <button class="btn-enroll">Mulai Belajar</button>
+            </div>
+
+            <div class="course-card">
+              <div class="course-badge beginner">Pemula</div>
+              <div class="course-icon">🌐</div>
+              <h3>Web Development</h3>
+              <p>Bangun website modern dengan HTML, CSS, dan JavaScript</p>
+              <div class="course-meta">
+                <span>⏱️ 25 jam</span>
+                <span>📚 15 modul</span>
+              </div>
+              <button class="btn-enroll">Mulai Belajar</button>
+            </div>
+
+            <div class="course-card">
+              <div class="course-badge advanced">Lanjutan</div>
+              <div class="course-icon">🤖</div>
+              <h3>Machine Learning</h3>
+              <p>Eksplorasi dunia AI dan machine learning dengan Python</p>
+              <div class="course-meta">
+                <span>⏱️ 40 jam</span>
+                <span>📚 18 modul</span>
+              </div>
+              <button class="btn-enroll">Mulai Belajar</button>
+            </div>
+
+            <div class="course-card">
+              <div class="course-badge intermediate">Menengah</div>
+              <div class="course-icon">🗄️</div>
+              <h3>Database Management</h3>
+              <p>
+                Pelajari cara mengelola database dengan MySQL dan PostgreSQL
+              </p>
+              <div class="course-meta">
+                <span>⏱️ 22 jam</span>
+                <span>📚 11 modul</span>
+              </div>
+              <button class="btn-enroll">Mulai Belajar</button>
+            </div>
+
+            <div class="course-card">
+              <div class="course-badge intermediate">Menengah</div>
+              <div class="course-icon">📱</div>
+              <h3>Mobile App Development</h3>
+              <p>Buat aplikasi mobile dengan React Native dan Flutter</p>
+              <div class="course-meta">
+                <span>⏱️ 35 jam</span>
+                <span>📚 16 modul</span>
+              </div>
+              <button class="btn-enroll">Mulai Belajar</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Profile Content -->
+        <div id="profileContent" class="content">
+          <h2>Profile Saya</h2>
+          <div class="profile-container">
+            <div class="profile-card">
+              <div class="profile-avatar">
+                <div class="avatar-circle">👤</div>
+              </div>
+              <h3 id="profileName">Pengguna</h3>
+              <p class="profile-email">user@eduflip.com</p>
+              <div class="profile-badges">
+                <span class="badge">🌟 Member Sejak 2024</span>
+                <span class="badge">🏆 8 Sertifikat</span>
+              </div>
+            </div>
+
+            <div class="profile-info">
+              <div class="info-section">
+                <h4>Informasi Personal</h4>
+                <div class="info-item">
+                  <label>Nama Lengkap</label>
+                  <input type="text" id="fullName" value="Pengguna EduFlip" />
+                </div>
+                <div class="info-item">
+                  <label>Email</label>
+                  <input type="email" id="email" value="user@eduflip.com" />
+                </div>
+                <div class="info-item">
+                  <label>Nomor Telepon</label>
+                  <input type="tel" id="phone" value="+62 812-3456-7890" />
+                </div>
+                <div class="info-item">
+                  <label>Bio</label>
+                  <textarea id="bio" rows="3">
+Saya seorang learner yang passionate di bidang teknologi informatika</textarea
+                  >
+                </div>
+                <button class="btn-primary">Simpan Perubahan</button>
+              </div>
+
+              <div class="info-section">
+                <h4>Statistik Pembelajaran</h4>
+                <div class="stats-list">
+                  <div class="stat-item">
+                    <span>Total Kursus Diikuti</span>
+                    <strong>12</strong>
+                  </div>
+                  <div class="stat-item">
+                    <span>Kursus Selesai</span>
+                    <strong>5</strong>
+                  </div>
+                  <div class="stat-item">
+                    <span>Jam Belajar</span>
+                    <strong>24</strong>
+                  </div>
+                  <div class="stat-item">
+                    <span>Sertifikat Diperoleh</span>
+                    <strong>8</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Statistik Grafik di Profile -->
+          <div class="statistics-section">
+            <h3>Analisis Pembelajaran</h3>
+            <div class="chart-container">
+              <div class="chart-box">
+                <h4>Distribusi Waktu Belajar</h4>
+                <canvas id="learningPieChart"></canvas>
+              </div>
+              <div class="chart-box">
+                <h4>Status Kursus</h4>
+                <canvas id="coursePieChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quiz Content -->
+        <div id="quizContent" class="content">
+          <div class="quiz-container">
+            <!-- Quiz Selection -->
+            <div id="quizSelection" class="quiz-section active">
+              <h2>Pilih Quiz</h2>
+              <p class="subtitle">
+                Uji pemahaman Anda dengan berbagai quiz interaktif
+              </p>
+
+              <div class="quiz-grid">
+                <div class="quiz-card" data-quiz="python">
+                  <div class="quiz-icon">🐍</div>
+                  <h3>Python Fundamentals</h3>
+                  <p>10 pertanyaan tentang dasar-dasar Python</p>
+                  <div class="quiz-meta">
+                    <span>⏱️ 15 menit</span>
+                    <span>📊 Level: Pemula</span>
+                  </div>
+                  <button class="btn-start-quiz">Mulai Quiz</button>
+                </div>
+
+                <div class="quiz-card" data-quiz="algorithm">
+                  <div class="quiz-icon">💾</div>
+                  <h3>Algoritma & Logika</h3>
+                  <p>10 pertanyaan tentang algoritma dasar</p>
+                  <div class="quiz-meta">
+                    <span>⏱️ 20 menit</span>
+                    <span>📊 Level: Menengah</span>
+                  </div>
+                  <button class="btn-start-quiz">Mulai Quiz</button>
+                </div>
+
+                <div class="quiz-card" data-quiz="webdev">
+                  <div class="quiz-icon">🌐</div>
+                  <h3>Web Development</h3>
+                  <p>10 pertanyaan tentang HTML, CSS & JavaScript</p>
+                  <div class="quiz-meta">
+                    <span>⏱️ 18 menit</span>
+                    <span>📊 Level: Pemula</span>
+                  </div>
+                  <button class="btn-start-quiz">Mulai Quiz</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quiz Play -->
+            <div id="quizPlay" class="quiz-section">
+              <div class="quiz-header">
+                <h2 id="quizTitle">Quiz Python Fundamentals</h2>
+                <div class="quiz-progress">
+                  <span id="questionNumber">Pertanyaan 1 dari 10</span>
+                  <div class="timer" id="timer">⏱️ 15:00</div>
+                </div>
+              </div>
+
+              <div class="question-container">
+                <h3 id="questionText">Loading...</h3>
+                <div class="options-container" id="optionsContainer">
+                  <!-- Options will be inserted here -->
+                </div>
+                <div class="quiz-navigation">
+                  <button class="btn-secondary" id="prevQuestion">
+                    ← Sebelumnya
+                  </button>
+                  <button class="btn-primary" id="nextQuestion">
+                    Selanjutnya →
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quiz Result -->
+            <div id="quizResult" class="quiz-section">
+              <div class="result-container">
+                <div class="result-icon" id="resultIcon">🎉</div>
+                <h2 id="resultTitle">Selamat!</h2>
+                <div class="result-score">
+                  <h3>Skor Anda</h3>
+                  <div class="score-display" id="scoreDisplay">0/10</div>
+                  <div class="score-percentage" id="scorePercentage">0%</div>
+                </div>
+                <div class="result-feedback" id="resultFeedback">
+                  Kerja bagus! Anda telah menguasai materi ini.
+                </div>
+                <div class="result-actions">
+                  <button class="btn-primary" id="reviewAnswers">
+                    Review Jawaban
+                  </button>
+                  <button class="btn-secondary" id="backToQuizzes">
+                    Kembali ke Quiz
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Notification Panel -->
+      <div class="notification-panel" id="notificationPanel">
+        <div class="notification-header">
+          <h3>Notifikasi</h3>
+          <button class="close-notification" id="closeNotification">✕</button>
+        </div>
+        <div class="notification-list" id="notificationList">
+          <div class="notification-item unread">
+            <div class="notification-icon">📚</div>
+            <div class="notification-content">
+              <h4>Kursus Baru Tersedia!</h4>
+              <p>Kursus "Machine Learning Advanced" telah tersedia</p>
+              <span class="notification-time">2 jam yang lalu</span>
+            </div>
+          </div>
+          <div class="notification-item unread">
+            <div class="notification-icon">🏆</div>
+            <div class="notification-content">
+              <h4>Sertifikat Siap!</h4>
+              <p>Sertifikat untuk kursus Python Dasar sudah bisa diunduh</p>
+              <span class="notification-time">5 jam yang lalu</span>
+            </div>
+          </div>
+          <div class="notification-item unread">
+            <div class="notification-icon">⭐</div>
+            <div class="notification-content">
+              <h4>Pencapaian Baru!</h4>
+              <p>Anda telah menyelesaikan 5 kursus. Luar biasa!</p>
+              <span class="notification-time">1 hari yang lalu</span>
+            </div>
+          </div>
+          <div class="notification-item">
+            <div class="notification-icon">📝</div>
+            <div class="notification-content">
+              <h4>Quiz Tersedia</h4>
+              <p>Coba quiz baru untuk Web Development</p>
+              <span class="notification-time">2 hari yang lalu</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+
+    <!-- Application Scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

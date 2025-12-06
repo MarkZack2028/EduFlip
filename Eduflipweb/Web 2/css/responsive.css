@@ -1,0 +1,77 @@
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 16px 20px;
+  }
+
+  .nav-menu {
+    gap: 15px;
+    font-size: 14px;
+  }
+
+  .notification-panel {
+    width: calc(100% - 40px);
+    right: -100%;
+  }
+
+  .notification-panel.show {
+    right: 20px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-container {
+    grid-template-columns: 1fr;
+  }
+
+  .welcome-section h2 {
+    font-size: 24px;
+  }
+
+  .chart-container {
+    grid-template-columns: 1fr;
+  }
+
+  .quiz-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .question-container {
+    padding: 25px;
+  }
+
+  .result-container {
+    padding: 30px 20px;
+  }
+
+  .score-display {
+    font-size: 56px;
+  }
+
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .event-card {
+    flex-direction: column;
+  }
+
+  .event-date {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .event-day {
+    font-size: 24px;
+  }
+}
