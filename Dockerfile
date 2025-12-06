@@ -1,0 +1,7 @@
+FROM php:8.2-apache
+
+# Install ekstensi PDO dan PDO MySQL
+RUN docker-php-ext-install pdo pdo_mysql
+
+# (opsional) set working dir
+WORKDIR /var/www/html
