@@ -1,3 +1,299 @@
-FROM php:8.2-apache # Install ekstensi PDO dan PDO MySQL RUN
-docker-php-ext-install pdo pdo_mysql # (opsional) set working dir WORKDIR
-/var/www/html
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduFlip - Platform Pembelajaran Interaktif</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <div class="nav-container">
+        <div class="logo">Edu<span>Flip</span></div>
+        <ul class="nav-links">
+          <li><a href="#features">Fitur</a></li>
+          <li><a href="#benefits">Manfaat</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="login.php" class="cta-btn">Login</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1>Belajar Lebih <span>Cerdas</span></h1>
+          <p>
+            Platform pembelajaran interaktif dengan teknologi terkini yang
+            dirancang khusus untuk mahasiswa yang ingin menguasai materi dengan
+            cara yang menyenangkan dan efektif.
+          </p>
+          <div class="hero-buttons">
+            <a href="signup.php" class="btn-primary">Mulai Gratis</a>
+            <button
+              class="btn-secondary"
+              onclick="alert('Video demo segera hadir!')"
+            >
+              Lihat Demo
+            </button>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-card">
+            <h3>🎓 Pembelajaran Terbimbing</h3>
+            <p>
+              Metode flipped classroom yang terbukti meningkatkan retensi hingga
+              85%
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+      <div class="features-container">
+        <div class="section-header">
+          <h2>Fitur Unggulan</h2>
+          <p>Semua yang Anda butuhkan dalam satu platform pembelajaran</p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">📚</div>
+            <h3>Micro-Learning</h3>
+            <p>
+              Konten pembelajaran dalam format pendek yang mudah dicerna dan
+              dapat diakses kapan saja
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <h3>Quiz Interaktif</h3>
+            <p>
+              Uji pemahaman Anda dengan quiz adaptif yang disesuaikan dengan
+              kecepatan belajar Anda
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">💬</div>
+            <h3>Forum Diskusi</h3>
+            <p>
+              Berdiskusi dengan sesama pelajar dan instruktur dalam komunitas
+              pembelajaran yang supportif
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🤖</div>
+            <h3>AI Chatbot</h3>
+            <p>
+              Dapatkan bantuan instan dari chatbot cerdas yang siap menjawab
+              pertanyaan Anda 24/7
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>Progress Dashboard</h3>
+            <p>
+              Pantau perkembangan belajar Anda dengan dashboard yang informatif
+              dan real-time
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📱</div>
+            <h3>Mode Offline</h3>
+            <p>
+              Akses materi pembelajaran tanpa koneksi internet untuk
+              fleksibilitas maksimal
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits" id="benefits">
+      <div class="benefits-container">
+        <div class="benefits-content">
+          <h2>Mengapa Memilih <span>EduFlip?</span></h2>
+          <ul class="benefit-list">
+            <li class="benefit-item">
+              <p>
+                <strong>Pembelajaran Personal</strong> - Setiap konten
+                disesuaikan dengan gaya belajar Anda
+              </p>
+            </li>
+            <li class="benefit-item">
+              <p>
+                <strong>Hemat Waktu</strong> - Belajar kapan saja, di mana saja,
+                sesuai jadwal Anda
+              </p>
+            </li>
+            <li class="benefit-item">
+              <p>
+                <strong>Komunitas Aktif</strong> - Bergabung dengan ribuan
+                pelajar yang bersemangat
+              </p>
+            </li>
+            <li class="benefit-item">
+              <p>
+                <strong>Sertifikasi Resmi</strong> - Dapatkan sertifikat yang
+                diakui industri
+              </p>
+            </li>
+            <li class="benefit-item">
+              <p>
+                <strong>Akses Seumur Hidup</strong> - Belajar kembali kapan saja
+                tanpa biaya tambahan
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="benefits-visual">
+          <h3>🚀</h3>
+          <h3>Tingkat Kelulusan 96%</h3>
+          <p>
+            Dengan metode pembelajaran yang terbukti efektif, 96% pengguna kami
+            berhasil mencapai tujuan pembelajaran mereka
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+      <div class="stats-container">
+        <div class="stat-item">
+          <h3>50K+</h3>
+          <p>Pengguna Aktif</p>
+        </div>
+        <div class="stat-item">
+          <h3>500+</h3>
+          <p>Kursus Tersedia</p>
+        </div>
+        <div class="stat-item">
+          <h3>10K+</h3>
+          <p>Video Pembelajaran</p>
+        </div>
+        <div class="stat-item">
+          <h3>24/7</h3>
+          <p>Dukungan Pelanggan</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="cta">
+      <div class="cta-content">
+        <h2>Siap Memulai Perjalanan Belajar Anda?</h2>
+        <p>
+          Bergabunglah dengan ribuan mahasiswa yang telah merasakan manfaat
+          pembelajaran dengan EduFlip
+        </p>
+        <a href="signup.php" class="btn-primary">Daftar Sekarang</a>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+      <div class="faq-container">
+        <div class="section-header">
+          <h2>Pertanyaan Umum</h2>
+          <p>Temukan jawaban untuk pertanyaan Anda di sini</p>
+        </div>
+        <div class="faq-items">
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Berapa biaya untuk menggunakan EduFlip?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                EduFlip menawarkan dua paket: Gratis dengan fitur dasar, dan
+                Premium dengan akses penuh ke semua fitur seharga Rp
+                99.000/bulan
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Bisakah saya membatalkan langganan kapan saja?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Ya, Anda dapat membatalkan langganan Premium kapan saja tanpa
+                penalti atau biaya tambahan. Akun Anda akan kembali ke paket
+                Gratis
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Apakah materi pembelajaran tersedia offline?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Ya, pengguna Premium dapat mengunduh materi pembelajaran dan
+                mengaksesnya offline melalui aplikasi mobile EduFlip
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Bagaimana cara mendapatkan sertifikat?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Setelah menyelesaikan kursus dan lulus ujian akhir dengan skor
+                minimal 70%, sertifikat akan otomatis dikirimkan ke email Anda
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-col">
+          <h4>Tentang EduFlip</h4>
+          <a href="#">Tentang Kami</a>
+          <a href="#">Misi & Visi</a>
+          <a href="#">Blog</a>
+          <a href="#">Karir</a>
+        </div>
+        <div class="footer-col">
+          <h4>Produk</h4>
+          <a href="#">Fitur</a>
+          <a href="#">Harga</a>
+          <a href="#">Aplikasi Mobile</a>
+          <a href="#">API</a>
+        </div>
+        <div class="footer-col">
+          <h4>Dukungan</h4>
+          <a href="#">Pusat Bantuan</a>
+          <a href="#">Kontak Kami</a>
+          <a href="#">FAQ</a>
+          <a href="#">Status Server</a>
+        </div>
+        <div class="footer-col">
+          <h4>Hukum</h4>
+          <a href="#">Kebijakan Privasi</a>
+          <a href="#">Syarat Layanan</a>
+          <a href="#">Keamanan</a>
+          <a href="#">Cookie</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 EduFlip. Semua hak dilindungi.</p>
+      </div>
+    </footer>
+
+    <script src="javascript/script.js"></script>
+  </body>
+</html>
